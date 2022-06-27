@@ -72,4 +72,6 @@ app.post("/api/v1/pondimage", imageUploads.single("capturedPondImage"), (request
       );
   });
 
-  app.listen(3005, () => console.log("Server Connected on port 3005"));
+  const PORT = process.env.PORT || 3005;
+  app.listen(PORT, () => {console.log(process.PORT);
+    console.log(`Server Connected on port ${PORT}`)});
